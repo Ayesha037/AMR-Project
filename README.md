@@ -1,26 +1,32 @@
 # Antimicrobial Resistance (AMR) Prediction
 
-## Project Overview
-This project predicts whether bacterial isolate will be resistant or is sensitive to a specified antibiotics using available features( meta data, species prior antibiotic use, and if available genomic features )and provide explainable output to help clinicians pick the right antibiotic fast
+A machine learning system that predicts whether a bacterial isolate will be **resistant or sensitive** to a given antibiotic — using clinical metadata, species information, prior antibiotic use, and genomic features where available.
 
-## Techniques Used
-- Data preprocessing
-- Feature engineering
-- Machine Learning models (Logistic Regression / Random Forest / XGBoost)
-- Model evaluation
+Designed to help clinicians pick the right antibiotic faster with explainable output.
+
+## What it does
+
+* Preprocesses and engineers features from clinical AMR datasets
+* Trains and compares Logistic Regression, Random Forest, and XGBoost models
+* Evaluates model performance with appropriate metrics for imbalanced medical data
+* Outputs interpretable predictions to support clinical decision-making
+
+## Tech Stack
+Python, Scikit-learn, Pandas, NumPy, Google Colab
 
 ## Dataset
-BVBRC_genome_amr
+BVBRC\_genome\_amr (Bacterial and Viral Bioinformatics Resource Center)
 
-## Future Work
-- Apply deep learning models
-- Integrate genomic data
-- Improve prediction accuracy
+## Pipeline Structure
+Raw Clinical Data → Preprocessing → Feature Engineering → Model Training → Evaluation → Explainable Output
 
-## Tools & Technologies
-- Python
-- Scikit-learn
-- Pandas
-- Google Colab
+## How to Run
 
+```bash
+# Open in Google Colab or locally
+pip install scikit-learn pandas numpy
+jupyter notebook Antibiotic_Resistence_preduction.ipynb
+```
 
+## Author
+**Mohammad Ayesha Summaiyya** — msumaiya03579@gmail.com
