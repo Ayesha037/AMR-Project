@@ -1,48 +1,31 @@
-# Antimicrobial Resistance (AMR) Prediction
+# Reliability of AMR Phenotype Prediction Under Increasingly Strict Generalization Settings
 
-A machine learning system that predicts whether a bacterial isolate will be **resistant or sensitive** to a given antibiotic — using clinical metadata, species information, prior antibiotic use, and genomic features where available.
+This repository contains the complete, reproducible codebase and analytic dataset for our manuscript evaluating data leakage and relational memorization in machine learning models for antimicrobial resistance (AMR) phenotype prediction.
 
-Designed to help clinicians pick the right antibiotic faster with explainable output.
+## Overview
+Conventional random row-level train/test splitting often produces overly optimistic performance estimates due to hidden relational dependencies (repeated species, genomes, and species-antibiotic relationships across observations). This study systematically evaluates four evaluation regimes to quantify how estimated performance changes when these data-leakage axes are progressively controlled.
 
-## What it does
+## Labeled Analytic Dataset
+The dataset originates from the Bacterial and Viral Bioinformatics Resource Center (BV-BRC). After filtering for rows with recorded `Resistant Phenotype` values, the clean analytic dataset contains 801 labeled observations across 5 species, 41 genomes, and 46 antibiotics. 
 
-* Preprocesses and engineers features from clinical AMR datasets
-* Trains and compares Logistic Regression, Random Forest, and XGBoost models
-* Evaluates model performance with appropriate metrics for imbalanced medical data
-* Outputs interpretable predictions to support clinical decision-making
+## Key Methodological Findings
+- **Regime 1 (Random Row-Level):** Optimistic baseline accuracy (~82.4%).
+- **Regime 2 (Unseen Species-Antibiotic Holdout):** Accuracy drops significantly (~62.8%) when the model cannot memorize repeated biological pairings.
+- **Regime 3 (Unseen Genome Holdout):** Performance recovers (~82.4%), demonstrating that models depend on a familiar species-antibiotic relationship rather than isolate-specific genomic features.
+- **Regime 4 (Leave-One-Species-Out):** Performance drops near chance (~43.8%), showing limited cross-species generalization.
 
-  
-## 📈 Model Performance
+## Pipeline and Dependencies
+The analysis is implemented in Python using a leakage-safe pipeline (where feature encoding and baseline tables are fit strictly within individual training folds).
+- pandas, numpy
+- scikit-learn
+- xgboost
+- shap
 
-| Model | Accuracy | AUC-ROC | Precision | Recall | F1-Score |
-|-------|----------|---------|-----------|--------|----------|
-| Logistic Regression | 78% | 0.81 | 0.75 | 0.70 | 0.72 |
-| Random Forest | 85% | 0.88 | 0.83 | 0.81 | 0.82 |
-| XGBoost | **89%** | **0.91** | **0.88** | **0.85** | **0.86** |
-
-**Dataset:** 
-BVBRC\_genome\_amr (Bacterial and Viral Bioinformatics Resource Center)
-2,150 clinical samples | 42 features | Class balance: 60% sensitive, 40% resistant
-
-**Top 3 Most Important Features (SHAP):**
-1. Prior antibiotic exposure - 28% impact
-2. Bacterial species type - 24% impact
-3. Patient age - 18% impact
-
-## Tech Stack
-Python, Scikit-learn, Pandas, NumPy, Google Colab
-
-
-## Pipeline Structure
-Raw Clinical Data → Preprocessing → Feature Engineering → Model Training → Evaluation → Explainable Output
-
-## How to Run
-
-```bash
-# Open in Google Colab or locally
-pip install scikit-learn pandas numpy
-jupyter notebook Antibiotic_Resistence_preduction.ipynb
-```
+## How to Reproduce
+1. Clone this repository.
+2. Ensure dependencies are installed: `pip install -r requirements.txt`
+3. Run the complete analysis pipeline notebook: `notebooks/amr_leakage_analysis.ipynb`
+4. All publication-ready figures and data tables will be exported automatically to the `outputs/` directory.
 
 ## Author
 **Mohammad Ayesha Summaiyya** — msumaiya03579@gmail.com
