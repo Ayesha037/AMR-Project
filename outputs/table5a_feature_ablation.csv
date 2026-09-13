@@ -1,0 +1,8 @@
+feature_set,n_features,accuracy_mean,accuracy_std,f1_mean,roc_auc_mean
+Species only,1,0.672,0.061,0.656,0.743
+Antibiotic only,1,0.674,0.052,0.679,0.807
+Antibiotic_Class only,1,0.649,0.064,0.675,0.712
+Species + Antibiotic,2,0.821,0.079,0.807,0.887
+Species + Antibiotic + Antibiotic_Class,3,0.828,0.083,0.818,0.892
+Full feature set (+ Computational Method),4,0.824,0.081,0.813,0.893
+Full minus Computational Method,3,0.828,0.083,0.818,0.892

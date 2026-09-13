@@ -1,0 +1,12 @@
+Antibiotic_Class,n,n_correct,n_false_positive,n_false_negative,accuracy,n_incorrect,small_sample_flag
+Aminoglycoside,41,30,3,8,0.7317073170731707,11,False
+Folate inhibitor,26,11,10,5,0.4230769230769231,15,False
+Penicillin,21,15,2,4,0.7142857142857143,6,False
+Macrolide,20,1,0,19,0.05,19,False
+Aminocyclitol,14,14,0,0,1.0,0,False
+Carbapenem,7,6,1,0,0.8571428571428571,1,False
+Cephalosporin,7,6,1,0,0.8571428571428571,1,False
+Tetracycline,7,5,2,0,0.7142857142857143,2,False
+Sulfonamide,7,6,1,0,0.8571428571428571,1,False
+Fluoroquinolone,6,5,1,0,0.8333333333333334,1,False
+Oxazolidinone,4,0,4,0,0.0,4,True

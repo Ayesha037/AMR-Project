@@ -1,0 +1,10 @@
+metric,value
+Total rows,1493
+Labelled rows,801
+Unlabelled rows,692
+Resistant (labelled),400
+Susceptible (labelled),401
+Species,5
+Genomes,41
+Antibiotics,46
+Species–Antibiotic combinations,82

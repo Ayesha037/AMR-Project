@@ -1,0 +1,5 @@
+Regime,Mean train rows,Mean test rows,Species overlap %,Genome overlap %,S-A overlap %,Genome–Antibiotic overlap %
+Random row-level,640.8,160.2,100.0,100.0,100.0,16.3
+Unseen Species-Antibiotic,640.8,160.2,100.0,100.0,0.0,0.0
+Unseen Genome,640.8,160.2,100.0,0.0,100.0,0.0
+Leave-One-Species-Out,640.8,160.2,0.0,0.0,0.0,0.0

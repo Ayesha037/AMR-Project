@@ -1,0 +1,3 @@
+regime,Full feature set (+ Computational Method),Full minus Computational Method,delta_accuracy_pp
+Unseen Genome,0.824,0.828,-0.4
+Unseen Species-Antibiotic,0.628,0.602,2.6

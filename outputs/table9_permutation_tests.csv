@@ -1,0 +1,6 @@
+regime,observed,null_mean,null_std,n_permutations,p_value,statistic
+Random row-level,0.8239,0.5016,0.0246,200,0.005,fold_mean
+Unseen Species-Antibiotic,0.628,0.4946,0.0212,200,0.005,fold_mean
+Unseen Genome,0.8238,0.4988,0.0233,200,0.005,fold_mean
+Leave-One-Species-Out,0.4057,0.4955,0.0208,200,1.0,pooled_OOF
+Leave-One-Species-Out,0.4379,0.4958,0.0278,200,0.995,fold_mean

@@ -1,0 +1,3 @@
+metric,value
+LOSO pooled OOF accuracy (primary),0.4057
+LOSO unweighted fold-mean accuracy (secondary),0.4379

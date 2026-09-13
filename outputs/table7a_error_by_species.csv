@@ -1,0 +1,6 @@
+Species,n,n_correct,n_false_positive,n_false_negative,accuracy,n_incorrect,small_sample_flag
+Salmonella enterica,56,44,0,12,0.7857142857142857,12,False
+Escherichia coli,42,35,7,0,0.8333333333333334,7,False
+Staphylococcus aureus,40,11,10,19,0.275,29,False
+Klebsiella pneumoniae,18,9,4,5,0.5,9,False
+Enterococcus faecium,4,0,4,0,0.0,4,True
