@@ -2,7 +2,7 @@
 
 **Apparent Performance of Antimicrobial Resistance Phenotype Prediction Depends on the Definition of an Unseen Observation**
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22976451.svg)](https://doi.org/10.5281/zenodo.22976451)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22976451.svg)](https://zenodo.org/records/22976451)
 
 > Most machine-learning studies of antimicrobial resistance (AMR) evaluate their models by splitting rows at random into training and test sets. That keeps individual rows apart, but it does nothing to stop the same species, antibiotic, species–antibiotic pairing, or genome from turning up on both sides of the split. This project measures how much that choice actually matters.
 
